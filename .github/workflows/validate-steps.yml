@@ -33,3 +33,9 @@ jobs:
             echo "One or more step validators failed"
             exit 1
           fi
+
+      - name: Verify medal integrity (anti-tamper)
+        run: python3 scripts/verify-medal.py
+        env:
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          COMPLETION_SECRET: ${{ secrets.COMPLETION_SECRET }}
