@@ -1,0 +1,35 @@
+name: Validate Step Progress
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  validate-steps:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run all step validators
+        shell: bash
+        run: |
+          set -euo pipefail
+          failed=0
+          shopt -s nullglob
+          for f in scripts/validate-step-*.py; do
+            echo "Running $f"
+            if ! python "$f"; then
+              failed=1
+            fi
+          done
+          if [[ $failed -ne 0 ]]; then
+            echo "One or more step validators failed"
+            exit 1
+          fi

@@ -1,0 +1,6 @@
+tutorial:
+  name: Secure Coding Web API
+  level: professional
+  total_steps: 10
+  default_language: es
+  base_repository: jgutierrezdtt/security-tutorial-base

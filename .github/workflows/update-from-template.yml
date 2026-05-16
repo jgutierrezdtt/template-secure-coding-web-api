@@ -1,0 +1,12 @@
+name: Update From Template
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update:
+    uses: jgutierrezdtt/security-tutorial-base/.github/workflows/reusable-update-from-template.yml@main
+    with:
+      tutorial-name: Secure Coding Web API
+    secrets:
+      token: ${{ secrets.GITHUB_TOKEN }}

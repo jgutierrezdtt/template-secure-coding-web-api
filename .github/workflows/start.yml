@@ -1,0 +1,12 @@
+name: Start Tutorial
+
+on:
+  workflow_dispatch:
+
+jobs:
+  start:
+    uses: jgutierrezdtt/security-tutorial-base/.github/workflows/reusable-start.yml@main
+    with:
+      tutorial-name: Secure Coding Web API
+    secrets:
+      token: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,14 @@
+name: Test Tutorial Integrity
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  tutorial-tests:
+    uses: jgutierrezdtt/security-tutorial-base/.github/workflows/reusable-tutorial-tests.yml@main
+    with:
+      tutorial-name: Secure Coding Web API
+      total-steps: 10
