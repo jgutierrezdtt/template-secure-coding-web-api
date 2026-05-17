@@ -16,12 +16,24 @@ jobs:
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683  # v4.2.2
 
+      - name: Check if tutorial has been started
+        id: guard
+        run: |
+          if [ ! -f ".tutorial-started" ]; then
+            echo "Tutorial not started yet -- this is the template repo. Skipping."
+            echo "skip=true" >> "${GITHUB_OUTPUT}"
+          else
+            echo "skip=false" >> "${GITHUB_OUTPUT}"
+          fi
+
       - name: Set up Python
+        if: steps.guard.outputs.skip == 'false'
         uses: actions/setup-python@8d9ed9ac5c53483de85588cdf95a591a75ab9f55  # v5.5.0
         with:
           python-version: "3.11"
 
       - name: Run validators and update README
+        if: steps.guard.outputs.skip == 'false'
         run: python3 scripts/generate-medal.py
         env:
           GITHUB_REPOSITORY: ${{ github.repository }}
@@ -30,7 +42,7 @@ jobs:
           GITHUB_SHA: ${{ github.sha }}
 
       - name: Commit progress to repository
-        if: success()
+        if: steps.guard.outputs.skip == 'false' && success()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
