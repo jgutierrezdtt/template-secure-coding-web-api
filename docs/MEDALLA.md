@@ -2,15 +2,15 @@
 
 | | |
 |---|---|
-| **Alumno** | jgutierrezdtt |
+| **Alumno** | student |
 | **Repositorio** | jgutierrezdtt/template-secure-coding-web-api |
-| **Fecha** | 2026-05-17 09:21 UTC |
+| **Fecha** | 2026-05-17 09:20 UTC |
 | **Pasos completados** | 10/10 |
 
 ## Prueba de integridad
 
-- **Run:** [https://github.com/jgutierrezdtt/template-secure-coding-web-api/actions/runs/25986973406](https://github.com/jgutierrezdtt/template-secure-coding-web-api/actions/runs/25986973406)
-- **Commit:** [eb4e372](https://github.com/jgutierrezdtt/template-secure-coding-web-api/commit/eb4e3725b319ffb80c6c571ee6805b053f0e7e55)
+- **Run:** [https://github.com/jgutierrezdtt/template-secure-coding-web-api/actions/runs/0](https://github.com/jgutierrezdtt/template-secure-coding-web-api/actions/runs/0)
+- **Commit:** [initial](https://github.com/jgutierrezdtt/template-secure-coding-web-api/commit/initial)
 
 La medalla fue generada automaticamente por `github-actions[bot]` cuando los 10
 validators pasaron en el run indicado. El run es publico e inmutable.
