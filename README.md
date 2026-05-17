@@ -1,70 +1,66 @@
-# Secure Coding Web y API
+# Secure Coding Web y API -- Completado
 
-Tutorial practico de seguridad para aplicaciones web y APIs REST/GraphQL.
-Aprende a identificar y corregir las vulnerabilidades mas frecuentes trabajando
-directamente sobre codigo real.
+> Repositorio de **jgutierrezdtt**
 
 ---
 
-## Por que este tutorial
+## Certificado de finalizacion
 
-La mayoria de los tutoriales de seguridad explican que existe una vulnerabilidad
-pero no te hacen sentir por que es un problema real ni explican por que la mitigacion
-funciona. Este tutorial hace las dos cosas: cada paso muestra codigo vulnerable, explica
-exactamente como un atacante lo explotaria, y luego explica por que el patron de
-mitigacion correcto elimina el riesgo estructuralmente.
+Este repositorio ha superado los 10 controles de seguridad del tutorial
+**Secure Coding Web y API**.
 
----
-
-## Inicio del tutorial
-
-[Empezar tutorial](https://github.com/jgutierrezdtt/template-secure-coding-web-api/fork)
-
-Si ya tienes tu fork, ve a la pestana **Actions** de tu repositorio y ejecuta el
-workflow **Start Tutorial** para ver el primer paso.
+| | |
+|---|---|
+| **Alumno** | jgutierrezdtt |
+| **Repositorio** | [jgutierrezdtt/template-secure-coding-web-api](https://github.com/jgutierrezdtt/template-secure-coding-web-api) |
+| **Fecha** | 2026-05-17 |
+| **Pasos** | 10/10 |
+| **Medalla** | [docs/MEDALLA.md](docs/MEDALLA.md) |
 
 ---
 
-## Gestion del progreso
+## Controles de seguridad implementados
 
-- [Validar progreso](../../actions/workflows/completion.yml)
-- [Iniciar tutorial](../../actions/workflows/start.yml)
-- [Reiniciar tutorial](../../actions/workflows/reset-tutorial.yml)
-
----
-
-## Tabla de pasos
-
-| Paso | Tema | Vulnerabilidad que resuelves |
-|------|------|------------------------------|
-| 0 | Introduccion | Lee esto primero |
-| 1 | SQL injection basica | Leer o modificar toda la base de datos sin credenciales |
-| 2 | SQL injection avanzada | Extraccion de datos sin errores visibles |
-| 3 | NoSQL injection (MongoDB) | Autenticarse sin contrasena con operadores del motor |
-| 4 | GraphQL security | Introspection y ataques de denegacion de servicio |
-| 5 | XSS y Content Security Policy | JavaScript del atacante en el navegador de tus usuarios |
-| 6 | SSRF | Usar tu servidor como proxy contra redes internas y cloud |
-| 7 | JWT y autenticacion | Fabricar tokens de sesion sin conocer el secreto |
-| 8 | Autorizacion: BOLA e IDOR | Acceder a datos de otros usuarios autenticados correctamente |
-| 9 | Mass assignment y exposicion | Escalar privilegios y extraer informacion sensible |
-| 10 | Checklist final | Consolida todos los controles |
+| Paso | Control implementado | Resultado |
+|------|----------------------|-----------|
+| 01 | SQL injection basica | PASS |
+| 02 | SQL injection avanzada | PASS |
+| 03 | NoSQL injection (MongoDB) | PASS |
+| 04 | GraphQL security | PASS |
+| 05 | XSS y Content Security Policy | PASS |
+| 06 | SSRF | PASS |
+| 07 | JWT y autenticacion en APIs | PASS |
+| 08 | Autorizacion: BOLA e IDOR | PASS |
+| 09 | Mass assignment y exposicion de datos | PASS |
+| 10 | Checklist final | PASS |
 
 ---
 
-## Paso 0
+## Prueba de integridad
 
-Cada paso de este tutorial muestra un archivo con una vulnerabilidad real en el codigo
-fuente del repositorio. Tu tarea es aplicar el patron de mitigacion correcto en ese
-archivo. Cuando hagas push, el workflow valida automaticamente tu cambio y actualiza
-este README con el siguiente paso.
+La medalla fue generada automaticamente por `github-actions[bot]` cuando los
+10 validators pasaron. La prueba es publica y permanente:
 
-No se necesita instalar nada local. Todo el feedback es automatico.
+- **Run:** https://github.com/jgutierrezdtt/template-secure-coding-web-api/actions/runs/25987145210
+- **Commit:** https://github.com/jgutierrezdtt/template-secure-coding-web-api/commit/2222c84c1fa478a81d45f2a9ff49ddb5251dddcc
+- **SHA:** `2222c84c1fa478a81d45f2a9ff49ddb5251dddcc`
+
+Cualquier persona puede abrir el run y verificar que todos los validators
+retornaron PASS en ese commit exacto.
 
 ---
 
-## Nivel y prerrequisitos
+## Que has aprendido
 
-- Nivel: profesional
-- Lenguaje del tutorial: espanol
-- Conocimientos recomendados: JavaScript/Node.js basico, nociones de como funciona una API REST
-- No se requiere experiencia previa en seguridad
+- SQL injection: parametrizacion y consultas preparadas
+- NoSQL injection: validacion de tipos antes de consultas
+- GraphQL: introspection, depth limits y parametrizacion
+- XSS: sanitizacion de HTML y cabeceras Content-Security-Policy
+- SSRF: validacion de rangos IP y protocolos
+- JWT: algoritmos fijos, issuer y secretos desde variables de entorno
+- BOLA/IDOR: autorizacion a nivel de objeto y middleware de rol
+- Mass assignment: listas blancas de campos y sanitizacion de respuestas
+
+---
+
+_Generado por github-actions[bot] -- [jgutierrezdtt/template-secure-coding-web-api](https://github.com/jgutierrezdtt/template-secure-coding-web-api)_
