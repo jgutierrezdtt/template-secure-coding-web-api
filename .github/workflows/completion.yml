@@ -21,23 +21,23 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Verify all steps and generate integrity token
+      - name: Run validators and update README
         run: python3 scripts/generate-medal.py
         env:
           GITHUB_REPOSITORY: ${{ github.repository }}
           GITHUB_ACTOR: ${{ github.actor }}
           GITHUB_RUN_ID: ${{ github.run_id }}
-          COMPLETION_SECRET: ${{ secrets.COMPLETION_SECRET }}
+          GITHUB_SHA: ${{ github.sha }}
 
-      - name: Commit medal to repository
+      - name: Commit progress to repository
         if: success()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/MEDALLA.md
+          git add README.md docs/MEDALLA.md
           if git diff --cached --quiet; then
-            echo "Medal already up to date — no commit needed"
+            echo "No changes to commit"
           else
-            git commit -m "award: medalla de completacion del tutorial [skip ci]"
+            git commit -m "progress: actualizar estado del tutorial [skip ci]"
             git push
           fi

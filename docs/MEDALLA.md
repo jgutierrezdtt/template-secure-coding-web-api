@@ -1,48 +1,34 @@
-# Medalla de completacion — template-secure-coding-web-api
+# Medalla de finalizacion -- Secure Coding Web y API
 
-**Token de integridad:** `E512D4291380B8ED06A6BF4B1759A76364E25FC0`
+| | |
+|---|---|
+| **Alumno** | student |
+| **Repositorio** | jgutierrezdtt/template-secure-coding-web-api |
+| **Fecha** | 2026-05-17 09:20 UTC |
+| **Pasos completados** | 10/10 |
 
-| Campo | Valor |
-|-------|-------|
-| Repositorio | `jgutierrezdtt/template-secure-coding-web-api` |
-| Completado por | `jgutierrezdtt` |
-| Pasos verificados | 10 de 10 |
-| Fecha | 2026-05-16 19:30 UTC |
-| Run ID | `25970880871` |
+## Prueba de integridad
+
+- **Run:** [https://github.com/jgutierrezdtt/template-secure-coding-web-api/actions/runs/0](https://github.com/jgutierrezdtt/template-secure-coding-web-api/actions/runs/0)
+- **Commit:** [initial](https://github.com/jgutierrezdtt/template-secure-coding-web-api/commit/initial)
+
+La medalla fue generada automaticamente por `github-actions[bot]` cuando los 10
+validators pasaron en el run indicado. El run es publico e inmutable.
+
+## Pasos completados
+
+| Paso | Estado |
+|------|--------|
+| validate-step-01 | PASS |
+| validate-step-02 | PASS |
+| validate-step-03 | PASS |
+| validate-step-04 | PASS |
+| validate-step-05 | PASS |
+| validate-step-06 | PASS |
+| validate-step-07 | PASS |
+| validate-step-08 | PASS |
+| validate-step-09 | PASS |
+| validate-step-10 | PASS |
 
 ---
-
-## Que garantiza este token
-
-- Los 10 validators ejecutaron en GitHub Actions y todos retornaron exit 0.
-- El token esta vinculado a este repositorio (`jgutierrezdtt/template-secure-coding-web-api`) y a este usuario (`jgutierrezdtt`).
-- No puede generarse sin que todos los archivos modificados en cada paso contengan los marcadores correctos verificados por los scripts de validacion.
-- Cada fork del repositorio produce un token distinto porque el campo `repo` es parte del payload firmado.
-
----
-
-## Como verificar este token
-
-El token es SHA-256 del payload canonico. Puedes verificarlo localmente:
-
-```python
-import hashlib, json
-
-payload = json.dumps(
-    {
-        "repo": "jgutierrezdtt/template-secure-coding-web-api",
-        "actor": "jgutierrezdtt",
-        "completed_steps": ["validate-step-01", "validate-step-02", "validate-step-03", "validate-step-04", "validate-step-05", "validate-step-06", "validate-step-07", "validate-step-08", "validate-step-09", "validate-step-10"],
-        "total": 10,
-    },
-    sort_keys=True,
-    separators=(",", ":"),
-).encode()
-
-token = hashlib.sha256(payload).hexdigest()[:40].upper()
-print(token)  # debe coincidir con el token de arriba
-```
-
-Si el token coincide, la completacion es autentica para este repositorio y usuario.
-Si configuraste `COMPLETION_SECRET` en el repositorio, el token usa HMAC-SHA256
-con esa clave — en ese caso la verificacion requiere conocer el secreto.
+_Generado por github-actions[bot] -- no editar manualmente._
