@@ -1,6 +1,6 @@
 # Secure Coding Web y API -- Completado
 
-> Repositorio de **student**
+> Repositorio de **jgutierrezdtt**
 
 ---
 
@@ -11,7 +11,7 @@ Este repositorio ha superado los 10 controles de seguridad del tutorial
 
 | | |
 |---|---|
-| **Alumno** | student |
+| **Alumno** | jgutierrezdtt |
 | **Repositorio** | [jgutierrezdtt/template-secure-coding-web-api](https://github.com/jgutierrezdtt/template-secure-coding-web-api) |
 | **Fecha** | 2026-05-17 |
 | **Pasos** | 10/10 |
@@ -41,9 +41,9 @@ Este repositorio ha superado los 10 controles de seguridad del tutorial
 La medalla fue generada automaticamente por `github-actions[bot]` cuando los
 10 validators pasaron. La prueba es publica y permanente:
 
-- **Run:** https://github.com/jgutierrezdtt/template-secure-coding-web-api/actions/runs/0
-- **Commit:** https://github.com/jgutierrezdtt/template-secure-coding-web-api/commit/initial
-- **SHA:** `initial`
+- **Run:** https://github.com/jgutierrezdtt/template-secure-coding-web-api/actions/runs/25986973406
+- **Commit:** https://github.com/jgutierrezdtt/template-secure-coding-web-api/commit/eb4e3725b319ffb80c6c571ee6805b053f0e7e55
+- **SHA:** `eb4e3725b319ffb80c6c571ee6805b053f0e7e55`
 
 Cualquier persona puede abrir el run y verificar que todos los validators
 retornaron PASS en ese commit exacto.
